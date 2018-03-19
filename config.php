@@ -399,7 +399,7 @@ $CFG->sslproxy = getenv('MOODLE_SSLPROXY_ENABLED');
 // It is possible to add extra themes directory stored outside of $CFG->dirroot.
 // This local directory does not have to be accessible from internet.
 //
-//     $CFG->themedir = '/location/of/extra/themes';
+$CFG->themedir = getenv('MOODLE_DATAROOT') . '/themes';
 //
 // It is possible to specify different cache and temp directories, use local fast filesystem
 // for normal web servers. Server clusters MUST use shared filesystem for cachedir!
